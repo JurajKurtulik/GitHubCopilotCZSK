@@ -1,1 +1,3 @@
-export function Ambient(){return <div className="ambient" aria-hidden="true"><div className="ambient-photo"/><div className="light light-blue"/><div className="light light-purple"/><div className="ambient-grid"/><div className="binary">01 001 10 01<br/>100 01 011 0<br/>010 10 001 1</div></div>}
+import type { CSSProperties } from 'react';
+const particles=[[12,62,21,-8],[29,23,27,-17],[48,79,24,-5],[66,34,31,-21],[80,66,26,-12],[91,22,29,-2]];
+export function Ambient(){return <div className="ambient" aria-hidden="true"><div className="ambient-photo"/><div className="light light-blue"/><div className="light light-purple"/><div className="ambient-grid"/><div className="binary">01 001 10 01<br/>100 01 011 0<br/>010 10 001 1</div><div className="data-particles">{particles.map(([left,top,period,delay],i)=><i key={i} style={{left:`${left}%`,top:`${top}%`,'--particle-period':`${period}s`,'--particle-delay':`${delay}s`} as CSSProperties}/>)}</div></div>}

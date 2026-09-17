@@ -1,0 +1,111 @@
+/* Motion-only layer: positions, typography, copy and brand palette stay unchanged. */
+.ambient{animation:ambient-wake 1.8s ease-out both}
+.light-blue{animation:blue-drift 22s ease-in-out infinite}
+.light-purple{animation:purple-drift 31s ease-in-out infinite;animation-delay:-9s}
+.ambient-grid{animation:grid-drift 37s ease-in-out infinite alternate,grid-wake 2s ease-out both}
+.binary{animation:binary-drift 29s ease-in-out infinite alternate;animation-delay:-5s}
+.data-particles{position:absolute;inset:0;overflow:hidden}
+.data-particles i{position:absolute;width:2px;height:2px;border-radius:50%;background:#8bdff4;opacity:.1;box-shadow:0 0 5px #40e0f530;animation:particle-drift var(--particle-period) ease-in-out var(--particle-delay) infinite}
+.data-pulse{display:block;position:absolute;width:100%;height:10px;overflow:visible;pointer-events:none;contain:layout style}
+.pulse-track{fill:none;stroke:#40e0f5;stroke-width:.7;opacity:.12;vector-effect:non-scaling-stroke}
+.pulse-packet{fill:none;stroke:#7aefff;stroke-width:2;stroke-linecap:round;stroke-dasharray:.035 .965;stroke-dashoffset:.05;opacity:0;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 3px #40e0f58a);animation:data-packet var(--pulse-period,7.5s) linear var(--pulse-delay,0s) infinite}
+.pulse-packet.reverse{animation-name:data-packet-reverse}
+.floating-element{display:inline-block;animation:float-small var(--float-period,8s) ease-in-out var(--float-delay,0s) infinite}
+.hero-art{perspective:900px;isolation:isolate}
+.hero-layer{animation:hero-float var(--float-period) ease-in-out var(--float-delay) infinite}
+.art-cloud{z-index:1}.art-code{z-index:0}.art-data{z-index:2}
+.art-copilot{z-index:4;animation:copilot-online 2.1s ease-out 1.2s both,copilot-breathe 9s ease-in-out 3.3s infinite}
+.hero-stream{inset:-5% -4%;width:108%;height:110%;z-index:3;opacity:.7}
+.hero-stream .pulse-packet{stroke-width:2.3;stroke-dasharray:.018 .982}
+.art-caption{display:flex;align-items:center;gap:.4cqw;z-index:5;white-space:nowrap}
+.art-caption b{font-weight:inherit;animation:concept-light 7.5s ease-in-out infinite;animation-delay:1.35s}
+.art-caption b:nth-of-type(2){animation-delay:1.9s}.art-caption b:nth-of-type(3){animation-delay:2.45s}
+.art-caption>span{position:relative;min-width:2.4cqw;text-align:center;padding:0 .7cqw;color:#4f839c}
+.art-caption .data-pulse{inset:50% 0 auto;transform:translateY(-50%);height:6px}
+.art-caption .pulse-packet{stroke-width:1.3;animation-name:concept-packet}
+.partner-orbit .orbit-core{animation:core-breathe 10s ease-in-out infinite}
+.partner-orbit .orbit-ring{animation:orbit-sway 28s ease-in-out infinite alternate}
+.partner-orbit .orbit-ring.inner{animation-direction:alternate-reverse;animation-duration:33s}
+.satellite-line .data-pulse{top:-5px;opacity:.65}
+.model-factor{isolation:isolate}
+.model-factor:before{content:'';position:absolute;inset:-.3cqw -.7cqw .1cqw 1.6cqw;background:linear-gradient(90deg,#40e0f512,transparent);border-radius:.3cqw;opacity:0;z-index:-1;animation:factor-emphasis 13.5s ease-in-out 1s infinite}
+.factor-1:before{animation-delay:4s}.factor-2:before{animation-delay:7s}
+.flow-wrap{position:relative}
+.flow-signal{left:.45cqw;top:calc(3.2cqw - 5px);width:calc(100% - 100% / var(--count));z-index:2}
+.flow-animated .flow-node{animation:stage-arrival 1s ease-out var(--node-delay) both,stage-idle var(--pulse-period) ease-in-out var(--node-idle-delay) infinite}
+.evolution .flow li:last-child .flow-node{box-shadow:0 0 0 .45cqw #40e0f51a,0 0 22px #40e0f588}
+.extension-symbol{transition:filter .45s ease,color .45s ease}
+.extension:hover .extension-symbol{filter:drop-shadow(0 0 9px #40e0f545)}
+.brain-in{left:16.5%;top:0;width:33.5%;height:9cqw;z-index:2}
+.brain-out{left:16.5%;top:5cqw;width:67%;height:9cqw;z-index:2}
+.brain-in .pulse-packet,.brain-out .pulse-packet{stroke-dasharray:.02 .98;opacity:.7}
+.connection-track>.data-pulse{top:-5px;opacity:.75}
+.azure-find .pulse-packet{animation-name:azure-packet-reverse}
+.azure-send .pulse-packet{animation-name:azure-packet}
+.azure-skills{animation:azure-think 8s ease-in-out 2s infinite}
+.azure-flow .flow-node{animation:azure-stage 8s ease-in-out .1s infinite}
+.azure-flow li:nth-child(2) .flow-node{animation-delay:2s}.azure-flow li:nth-child(3) .flow-node{animation-delay:3.4s}.azure-flow li:nth-child(4) .flow-node{animation-delay:4.6s}
+.lifecycle{position:relative}
+.scene-13>h1,.scene-14>h1{min-height:4.2cqw}
+.lifecycle-focus{position:absolute;top:3.2cqw;width:1.7cqw;height:1.7cqw;margin-left:.45cqw;border-radius:50%;transform:translate(-50%,-50%);border:1px solid #40e0f570;box-shadow:0 0 0 .4cqw #40e0f509,0 0 20px #40e0f530;pointer-events:none}
+.lifecycle .flow-node,.lifecycle .flow h3{transition:color .6s ease,background .6s ease,box-shadow .6s ease}
+.lifecycle .flow li:not(.dim) h3{color:var(--cyan)}
+.lifecycle .flow:before{background:#334762;transition:opacity .6s ease}
+.lifecycle:not(.production) .flow:after{content:'';position:absolute;left:0;top:3.2cqw;width:20%;height:2px;background:linear-gradient(90deg,var(--violet),var(--cyan));opacity:.8}
+.lifecycle.production .flow:before{background:#334762}
+.outcomes span{animation:ambiguity-drift 9s ease-in-out infinite}.outcomes span:nth-child(2){animation-duration:11s;animation-delay:-3s}.outcomes span:nth-child(3){animation-duration:13s;animation-delay:-7s}
+.clear-input strong{text-shadow:0 0 20px #40e0f529}
+.documentation{position:relative}
+.conversation-lines i{animation:conversation-align 1.2s var(--ease) both}.conversation-lines i:nth-child(2){animation-delay:.12s}.conversation-lines i:nth-child(3){animation-delay:.24s}
+.doc-1 li{animation:document-align 1.25s var(--ease) both}.doc-1 li:nth-child(2){animation-delay:.1s}.doc-1 li:nth-child(3){animation-delay:.2s}.doc-1 li:nth-child(4){animation-delay:.3s}.doc-1 li:nth-child(5){animation-delay:.4s}
+.plan-lines i{transform-origin:left;animation:plan-align 1.4s var(--ease) .65s both}.plan-lines i:nth-child(2){animation-delay:.8s}.plan-lines i:nth-child(3){animation-delay:.95s}
+.documentation-pulse{left:0;top:6cqw;width:100%;opacity:.45}
+.human-steps>div:last-child h2{animation:decision-breathe 13s ease-in-out infinite}
+.business-flow .flow li:last-child .flow-node{box-shadow:0 0 0 .45cqw #40e0f519,0 0 20px #40e0f55a}
+
+@keyframes ambient-wake{from{opacity:.2}to{opacity:1}}
+@keyframes grid-wake{from{opacity:0}to{opacity:1}}
+@keyframes blue-drift{0%,100%{transform:translate(0,0) scale(1);opacity:.14}50%{transform:translate(-18px,-12px) scale(1.04);opacity:.22}}
+@keyframes purple-drift{0%,100%{transform:translate(0,0) scale(1);opacity:.12}50%{transform:translate(14px,11px) scale(1.035);opacity:.18}}
+@keyframes grid-drift{from{background-position:0 0,0 0}to{background-position:6px 4px,6px 4px}}
+@keyframes binary-drift{0%{transform:translateY(0);opacity:.035}60%{opacity:.06}100%{transform:translateY(-9px);opacity:.04}}
+@keyframes particle-drift{0%,100%{transform:translate(0,0);opacity:.05}45%{opacity:.22}60%{transform:translate(8px,-14px)}80%{opacity:.1}}
+@keyframes data-packet{0%{stroke-dashoffset:.05;opacity:0}4%{opacity:.8}30%{stroke-dashoffset:-1;opacity:.75}34%,100%{stroke-dashoffset:-1;opacity:0}}
+@keyframes data-packet-reverse{0%{stroke-dashoffset:-1;opacity:0}4%{opacity:.8}30%{stroke-dashoffset:.05;opacity:.75}34%,100%{stroke-dashoffset:.05;opacity:0}}
+@keyframes concept-packet{0%{stroke-dashoffset:.05;opacity:0}2%{opacity:.85}7%{stroke-dashoffset:-1;opacity:.8}10%,100%{stroke-dashoffset:-1;opacity:0}}
+@keyframes float-small{0%,100%{translate:0 0}50%{translate:1px -2px}}
+@keyframes hero-float{0%,100%{translate:0 0}50%{translate:1px -3px}}
+@keyframes copilot-online{0%{box-shadow:0 0 20px #0776d422}40%{box-shadow:0 0 65px #40e0f552,0 0 25px #40e0f535}100%{box-shadow:0 0 65px #0776d44a}}
+@keyframes copilot-breathe{0%,100%{box-shadow:0 0 65px #0776d42f}50%{box-shadow:0 0 68px #168ace4a}}
+@keyframes concept-light{0%,18%,100%{color:#90a4c0;text-shadow:none}5%,10%{color:#b3f7ff;text-shadow:0 0 8px #40e0f540}}
+@keyframes core-breathe{0%,100%{box-shadow:0 0 55px #0387e018}50%{box-shadow:0 0 65px #0387e02c}}
+@keyframes orbit-sway{from{transform:translate(-50%,-50%) rotate(-1.5deg)}to{transform:translate(-50%,-50%) rotate(1.5deg)}}
+@keyframes factor-emphasis{0%,23%,100%{opacity:0}7%,16%{opacity:1}}
+@keyframes stage-arrival{0%{opacity:.45;box-shadow:0 0 0 .45cqw #40e0f505}45%{opacity:1;box-shadow:0 0 0 .45cqw #40e0f51a,0 0 24px #40e0f57a}100%{opacity:1}}
+@keyframes stage-idle{0%,19%,100%{filter:brightness(1)}6%,11%{filter:brightness(1.45)}}
+@keyframes azure-think{0%,22%,100%{box-shadow:none}8%,14%{box-shadow:0 0 24px #40e0f51f}}
+@keyframes azure-stage{0%,20%,100%{filter:brightness(1)}7%,13%{filter:brightness(1.55)}}
+@keyframes azure-packet{0%{stroke-dashoffset:.05;opacity:0}2%{opacity:.8}12.5%{stroke-dashoffset:-1;opacity:.7}16%,100%{stroke-dashoffset:-1;opacity:0}}
+@keyframes azure-packet-reverse{0%{stroke-dashoffset:-1;opacity:0}2%{opacity:.8}12.5%{stroke-dashoffset:.05;opacity:.7}16%,100%{stroke-dashoffset:.05;opacity:0}}
+@keyframes ambiguity-drift{0%,100%{translate:0 0}35%{translate:1px -1px}65%{translate:-1px 1.5px}}
+@keyframes conversation-align{from{transform:translateX(-6px);opacity:.25}to{transform:translateX(0);opacity:1}}
+@keyframes document-align{from{transform:translateX(-8px);opacity:.2}to{transform:translateX(0);opacity:1}}
+@keyframes plan-align{from{transform:scaleX(.75);opacity:.2}to{transform:scaleX(1);opacity:1}}
+@keyframes decision-breathe{0%,100%{text-shadow:0 0 14px #40e0f50c}50%{text-shadow:0 0 18px #40e0f529}}
+
+@media(max-width:650px) and (orientation:portrait){
+ .art-caption{display:none}.hero-stream{inset:-5%;width:110%;height:110%}
+ .flow-signal,.documentation-pulse{display:none}
+ .flow .step-no{height:auto;line-height:normal}
+ .lifecycle-focus{display:none}
+ .scene-13>h1,.scene-14>h1{min-height:24.2cqw}
+ .lifecycle:not(.production) .flow:after{display:none}
+ .brain-in{height:20cqw}.brain-out{top:10cqw;height:20cqw}
+ .model-factor:before{inset:0 0 1cqw 4cqw}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{animation:none!important;transition:none!important}
+ .pulse-packet,.data-particles{display:none!important}
+ .hero-layer,.floating-element,.outcomes span{translate:none!important}
+ .lifecycle-focus{box-shadow:0 0 0 .4cqw #40e0f509}
+}
