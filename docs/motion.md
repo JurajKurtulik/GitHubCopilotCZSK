@@ -11,3 +11,12 @@ Tato úprava zachovává viditelné texty, všech 21 scén, jejich pořadí, kom
 - `prefers-reduced-motion` vypne CSS smyčky, částice i SVG pakety. Framer Motion vynechá prostorové vstupy a ponechá krátké prolínání. Obsah a zvýraznění zůstanou dostupné.
 
 Volitelné hover efekty přidávají jen světelné zvýraznění existujících symbolů. Nepřidávají nové texty ani obsah závislý na myši.
+
+
+## Continuous motion refinement
+
+Light packets now use normalized 100-unit SVG paths without non-scaling strokes, avoiding tiny repeated dots. Two visible segments run continuously with negative phase offsets and no hidden waiting phase. The hero adds two rotating light rings and four floating binary fragments. Ambient light, particles, node emphasis and layer drift are stronger while text stays readable.
+
+Orbit markers use a dedicated class, so floating label spans cannot inherit dot dimensions. Infrastructure as Code stays on one desktop line and two mobile lines. Brain/context/tools uses a continuous straight gradient beam behind its circles. The shared lifecycle progress track grows from 20% to 40%, retaining steps 1 and 2 while focusing step 3. Reduced-motion preferences disable all continuous animation.
+
+Validation: TypeScript and production build pass. Browser inspection verified nine orbit markers, single-line desktop labels, two-line mobile infrastructure label without horizontal overflow, straight brain connectors, and persistent lifecycle DOM with two/three active steps and 20%/40% progress.

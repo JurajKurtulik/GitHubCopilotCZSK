@@ -51,7 +51,7 @@
 .lifecycle .flow-node,.lifecycle .flow h3{transition:color .6s ease,background .6s ease,box-shadow .6s ease}
 .lifecycle .flow li:not(.dim) h3{color:var(--cyan)}
 .lifecycle .flow:before{background:#334762;transition:opacity .6s ease}
-.lifecycle:not(.production) .flow:after{content:'';position:absolute;left:0;top:3.2cqw;width:20%;height:2px;background:linear-gradient(90deg,var(--violet),var(--cyan));opacity:.8}
+
 .lifecycle.production .flow:before{background:#334762}
 .outcomes span{animation:ambiguity-drift 9s ease-in-out infinite}.outcomes span:nth-child(2){animation-duration:11s;animation-delay:-3s}.outcomes span:nth-child(3){animation-duration:13s;animation-delay:-7s}
 .clear-input strong{text-shadow:0 0 20px #40e0f529}
@@ -93,11 +93,51 @@
 @keyframes plan-align{from{transform:scaleX(.75);opacity:.2}to{transform:scaleX(1);opacity:1}}
 @keyframes decision-breathe{0%,100%{text-shadow:0 0 14px #40e0f50c}50%{text-shadow:0 0 18px #40e0f529}}
 
+
+/* Continuous beams have no invisible waiting phase. */
+.pulse-packet{stroke-width:.65;stroke-dasharray:12 38;stroke-dashoffset:0;vector-effect:none;opacity:.95;filter:drop-shadow(0 0 2px #40e0f5);animation-name:data-packet}
+.pulse-packet.reverse,.azure-find .pulse-packet{animation-name:data-packet-reverse}
+.hero-stream .pulse-packet{stroke-width:.45;stroke-dasharray:12 38}
+.art-caption .pulse-packet,.azure-send .pulse-packet{animation-name:data-packet}
+.satellite-line .data-pulse,.connection-track>.data-pulse,.documentation-pulse{opacity:.9}
+@keyframes data-packet{from{stroke-dashoffset:0}to{stroke-dashoffset:-50}}
+@keyframes data-packet-reverse{from{stroke-dashoffset:-50}to{stroke-dashoffset:0}}
+.orbit-label .floating-element{width:auto;height:auto;white-space:nowrap}
+.orbit-stream{left:50%;top:50%;width:36cqw;height:23cqw;transform:translate(-50%,-50%);opacity:.85}
+.orbit-stream .pulse-packet{stroke-width:.4;stroke-dasharray:9 41}
+.brain-beam{position:absolute;left:15%;right:15%;top:6cqw;height:3px;background:repeating-linear-gradient(90deg,#7654c9 0%,#3b91d3 20%,#9ffaff 32%,#40e0f5 36%,#3b91d3 44%,#7654c9 50%);background-size:200% 100%;box-shadow:0 0 12px #40e0f580;animation:beam-flow 4s linear infinite}
+.system-part{position:relative}.brain-system:before{top:6cqw}
+.lifecycle-progress{position:absolute;left:.45cqw;top:3.2cqw;height:3px;background:repeating-linear-gradient(90deg,#8770ff 0%,#40cfe9 20%,#c3ffff 32%,#40e0f5 38%,#8770ff 50%);background-size:200% 100%;box-shadow:0 0 12px #40e0f577;animation:beam-flow 4s linear infinite;pointer-events:none}
+.lifecycle.production .flow li:nth-child(-n+2) h3{color:#b0d6e5}
+.lifecycle-focus{animation:focus-breathe 3s ease-in-out infinite}
+.hero-digital{position:absolute;inset:-3% -3% 0;z-index:3;pointer-events:none}
+.digital-ring{position:absolute;left:12%;top:9%;width:75%;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 12%,#42e4ff 19%,transparent 28% 61%,#9572ff 70%,transparent 81%);mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1px));animation:digital-turn 13s linear infinite;opacity:.8}
+.digital-ring.ring-two{left:19%;top:18%;width:61%;animation-direction:reverse;animation-duration:18s;opacity:.5}
+.hero-digital>span{position:absolute;left:calc(12% + var(--i)*22%);top:calc(72% - var(--i)*17%);font-family:monospace;font-size:.85cqw;letter-spacing:.15em;color:#7ff0ff;text-shadow:0 0 10px #40e0f5;animation:code-float 6s ease-in-out infinite;animation-delay:calc(var(--i)*-1.5s)}
+.hero-layer{animation-duration:6s}
+@keyframes digital-turn{to{transform:rotate(360deg)}}
+@keyframes code-float{0%,100%{translate:0 8px;opacity:.45}50%{translate:0 -12px;opacity:.9}}
+@keyframes beam-flow{from{background-position:0% 0}to{background-position:200% 0}}
+@keyframes hero-float{0%,100%{translate:0 0}50%{translate:3px -8px}}
+@keyframes float-small{0%,100%{translate:0 0}50%{translate:0 -4px}}
+@keyframes focus-breathe{0%,100%{box-shadow:0 0 0 .3cqw #40e0f514,0 0 18px #40e0f54a}50%{box-shadow:0 0 0 .6cqw #40e0f520,0 0 28px #40e0f58a}}
+@keyframes stage-idle{0%,100%{filter:brightness(1)}50%{filter:brightness(1.65)}}
+@keyframes azure-stage{0%,100%{filter:brightness(1)}50%{filter:brightness(1.75)}}
+@keyframes azure-think{0%,100%{box-shadow:0 0 12px #40e0f51f}50%{box-shadow:0 0 28px #40e0f54f}}
+@keyframes factor-emphasis{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes concept-light{0%,100%{color:#90b8cf;text-shadow:0 0 4px #40e0f520}50%{color:#cefcff;text-shadow:0 0 12px #40e0f599}}
+@keyframes particle-drift{0%,100%{transform:translate(0,0);opacity:.25}50%{transform:translate(22px,-38px);opacity:.65}}
+.data-particles i{width:3px;height:3px;box-shadow:0 0 8px #40e0f570;animation-duration:12s}
+@keyframes blue-drift{0%,100%{transform:translate(0,0) scale(1);opacity:.19}50%{transform:translate(-38px,-25px) scale(1.08);opacity:.32}}
+@keyframes purple-drift{0%,100%{transform:translate(0,0);opacity:.16}50%{transform:translate(30px,22px);opacity:.28}}
+.light-blue{animation-duration:12s}.light-purple{animation-duration:16s}
 @media(max-width:650px) and (orientation:portrait){
  .art-caption{display:none}.hero-stream{inset:-5%;width:110%;height:110%}
  .flow-signal,.documentation-pulse{display:none}
  .flow .step-no{height:auto;line-height:normal}
- .lifecycle-focus{display:none}
+ .lifecycle-focus,.lifecycle-progress{display:none}
+ .orbit-stream{width:60cqw;height:55cqw}.orbit-label .floating-element{white-space:normal}.hero-digital>span{font-size:2cqw}
+ .brain-beam{top:11cqw;height:2px}
  .scene-13>h1,.scene-14>h1{min-height:24.2cqw}
  .lifecycle:not(.production) .flow:after{display:none}
  .brain-in{height:20cqw}.brain-out{top:10cqw;height:20cqw}

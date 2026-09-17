@@ -8,9 +8,9 @@ export function DataPulse({ path='M 0 5 L 100 5', viewBox='0 0 100 10', period=7
  path?:string;viewBox?:string;period?:number;delay?:number;reverse?:boolean;className?:string;track?:boolean;
 }) {
  const reduced=useReducedMotion();
- return <svg className={`data-pulse ${className}`} viewBox={viewBox} preserveAspectRatio="none" aria-hidden="true" focusable="false" style={{'--pulse-period':`${period}s`,'--pulse-delay':`${delay}s`} as CSSProperties}>
+ return <svg className={`data-pulse ${className}`} viewBox={viewBox} preserveAspectRatio="none" aria-hidden="true" focusable="false" style={{'--pulse-period':`${period*.65}s`,'--pulse-delay':`${-delay}s`} as CSSProperties}>
   {track&&<path d={path} className="pulse-track"/>}
-  {!reduced&&<path d={path} pathLength="1" className={`pulse-packet ${reverse?'reverse':''}`}/>}
+  {!reduced&&<path d={path} pathLength="100" className={`pulse-packet ${reverse?'reverse':''}`}/>}
  </svg>;
 }
 
@@ -27,3 +27,5 @@ export function HeroLayer({src,className,delay,period}:{src:string;className:str
 export function HeroConcept(){
  return <div className="art-caption"><b>NÁPAD</b><span>→<DataPulse period={7.5} delay={1.5}/></span><b>ŘEŠENÍ</b><span>→<DataPulse period={7.5} delay={2.05}/></span><b>DEPLOYMENT</b></div>;
 }
+
+export function HeroDigital(){return <div className="hero-digital" aria-hidden="true"><div className="digital-ring"/><div className="digital-ring ring-two"/>{['0101','1010','0011','1100'].map((code,i)=><span key={code} style={{'--i':i} as CSSProperties}>{code}</span>)}</div>}
