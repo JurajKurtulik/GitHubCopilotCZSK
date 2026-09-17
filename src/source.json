@@ -1,0 +1,336 @@
+[
+  {
+    "number": 1,
+    "texts": [
+      "GitHub Copilot:",
+      "od nápadu",
+      "k deploymentu",
+      "Jak proměnit zákaznický nápad",
+      "ve fungující řešení",
+      "Pro Microsoft partnery · SMB segment",
+      "TD SYNNEX · CoE Microsoft",
+      "PARTNER WEBINAR  ·  MICROSOFT PARTNEŘI  ·  SMB"
+    ]
+  },
+  {
+    "number": 2,
+    "texts": [
+      "Jak dnes používáte AI?"
+    ]
+  },
+  {
+    "number": 3,
+    "texts": [
+      "Co už dnes necháváte AI",
+      "dělat za vás?"
+    ]
+  },
+  {
+    "number": 4,
+    "texts": [
+      "Co všechno dnes dokáže GitHub Copilot?",
+      "Pochopit existující projekt",
+      "Navrhnout aplikaci",
+      "Navrhnout architekturu",
+      "Pracovat s kódem",
+      "Připravit infrastrukturu",
+      "Pracovat s Azure",
+      "Spustit testy",
+      "Najít a opravit problém",
+      "Pomoci s nasazením",
+      "Od pochopení projektu až po nasazení – v jednom pracovním prostředí."
+    ]
+  },
+  {
+    "number": 5,
+    "texts": [
+      "Nemusíte být expert na všechno",
+      "Frontend",
+      "Backend",
+      "Cloud",
+      "Data",
+      "Infrastructure as Code",
+      "Security",
+      "Testing",
+      "Deployment",
+      "Monitoring",
+      "Kolik z toho dnes musím opravdu ovládat do hloubky?",
+      "Partner"
+    ]
+  },
+  {
+    "number": 6,
+    "texts": [
+      "Kde všude Copilot pracuje?",
+      "HLAVNÍ PRACOVNÍ PROSTOR",
+      "IDE / VS Code - chat, plan, agent mode",
+      "CLI",
+      "Terminál a skripty",
+      "GitHub",
+      "Pull requesty, issues, code review",
+      "Cloud / Agents",
+      "Delegované úlohy na pozadí"
+    ]
+  },
+  {
+    "number": 7,
+    "texts": [
+      "Jeden Copilot, více modelů",
+      "GitHub Copilot  –  jedno prostředí",
+      "RYCHLOST",
+      "Jak rychle odpovídá",
+      "SCHOPNOSTI",
+      "Jak složité úlohy zvládne",
+      "CENA",
+      "Kolik AI Credits spotřebuje",
+      "Výběr modelu přímo v Copilot chatu",
+      "GitHub Copilot není jeden konkrétní LLM. Podle typu úlohy použijeme různý model."
+    ]
+  },
+  {
+    "number": 8,
+    "texts": [
+      "GitHub Copilot už není jen autocomplete",
+      "01",
+      "Doplň",
+      "02",
+      "Vysvětli",
+      "03",
+      "Navrhni",
+      "04",
+      "Naplánuj",
+      "05",
+      "Proveď",
+      "06",
+      "Deleguj",
+      "JEDNOTLIVÉ ŘÁDKY KÓDU",
+      "CELÉ ÚLOHY A DELEGOVÁNÍ",
+      "Hodnota GitHub Copilotu se posunula daleko za doplňování kódu."
+    ]
+  },
+  {
+    "number": 9,
+    "texts": [
+      "Jak mu přidám nové schopnosti?",
+      "Instructions",
+      "Jak má pracovat",
+      "Agents",
+      "Na co se má specializovat",
+      "Skills",
+      "Co má umět",
+      "MCP & Tools",
+      "S čím může pracovat"
+    ]
+  },
+  {
+    "number": 10,
+    "texts": [
+      "Mozek, znalosti a ruce",
+      "MODEL",
+      "Umí přemýšlet",
+      "+",
+      "CONTEXT / SKILLS",
+      "Dávají mu znalosti",
+      "+",
+      "TOOLS / MCP",
+      "Umožní něco skutečně udělat",
+      "Samotný model umí přemýšlet. Kontext mu dává znalosti. Nástroje mu umožní něco skutečně udělat.",
+      "Mozek",
+      "Znalosti",
+      "Ruce"
+    ]
+  },
+  {
+    "number": 11,
+    "texts": [
+      "Azure už není oddělený svět",
+      "GitHub Copilot",
+      "Azure Skills",
+      "Azure",
+      "01",
+      "Zjisti",
+      "02",
+      "Navrhni",
+      "03",
+      "Připrav",
+      "04",
+      "Nasaď",
+      "Pomůže i s Azure prostředím, infrastrukturou a deploymentem."
+    ]
+  },
+  {
+    "number": 12,
+    "texts": [
+      "Co se tím mění pro partnera?",
+      "Obchodník",
+      "→  Rychleji převede zákaznický nápad do konkrétního scénáře, který lze ověřit.",
+      "Presales",
+      "→  Dokáže připravit hmatatelné PoC a se zákazníkem rychle ověřit, jestli řešení dává smysl.",
+      "Implementační specialista",
+      "→  Dokáže obsáhnout širší část realizace – od návrhu přes Azure až po nasazení.",
+      "Nejde jen o vyšší produktivitu. Jde o širší schopnost dodat zákazníkovi výsledek."
+    ]
+  },
+  {
+    "number": 13,
+    "texts": [
+      "PoC ukáže, jestli má smysl pokračovat",
+      "01",
+      "Nápad",
+      "02",
+      "PoC",
+      "03",
+      "Produkční příprava",
+      "04",
+      "Validace",
+      "05",
+      "Produkce",
+      "Funguje náš nápad a má pro zákazníka dostatečnou hodnotu?",
+      "AI umožňuje velmi rychle dojít k něčemu hmatatelnému, co lze se zákazníkem ověřit dříve, než investujeme více času a prostředků."
+    ]
+  },
+  {
+    "number": 14,
+    "texts": [
+      "PoC není produkce",
+      "01",
+      "Nápad",
+      "02",
+      "PoC",
+      "03",
+      "Produkční příprava",
+      "04",
+      "Validace",
+      "05",
+      "Produkce",
+      "OBLASTI PRODUKČNÍ PŘÍPRAVY",
+      "Bezpečnost",
+      "Identity & přístupy",
+      "Governance",
+      "Škálování",
+      "Monitoring & provoz",
+      "Náklady",
+      "Testování",
+      "AI může pomáhat i tady. Odpovědnost ale zůstává na nás."
+    ]
+  },
+  {
+    "number": 15,
+    "texts": [
+      "Kvalitní výsledek začíná kvalitním zadáním",
+      "„Vytvoř mi aplikaci.“",
+      "Webová aplikace?",
+      "Mobilní aplikace?",
+      "Interní nástroj?",
+      "„Takhle má aplikace fungovat.“",
+      "Jasný výsledek",
+      "Dobré zadání dává AI jasný směr a hranice."
+    ]
+  },
+  {
+    "number": 16,
+    "texts": [
+      "AI vám pomůže připravit zadání",
+      "01",
+      "Rozhovor",
+      "Nestrukturované povídání o problému se zákazníkem",
+      "02",
+      "Dokumentace",
+      "03",
+      "Plán",
+      "Copilot připraví kroky a realizuje změny",
+      "Co řešení dělá",
+      "Pro koho je určeno",
+      "Hlavní funkce",
+      "Pravidla a omezení",
+      "Kritéria úspěchu"
+    ]
+  },
+  {
+    "number": 17,
+    "texts": [
+      "AI pracuje. Člověk rozhoduje.",
+      "01",
+      "Plánuj",
+      "Než AI začne pracovat",
+      "02",
+      "Kontroluj",
+      "Každou změnu a každý krok",
+      "03",
+      "Testuj",
+      "Výsledek, ne dojem",
+      "04",
+      "Schvaluj",
+      "Nasazení je vaše rozhodnutí",
+      "Důvěřuj, ale ověřuj.",
+      "AI rozšiřuje naši kapacitu, ale odpovědnost za výsledek zůstává na člověku."
+    ]
+  },
+  {
+    "number": 18,
+    "texts": [
+      "GitHub Copilot: jakou licenci potřebuji?",
+      "GitHub Copilot Business ",
+      "$19",
+      "za uživatele / měsíc",
+      "list price USD",
+      "Copilot Enterprise ",
+      "$39",
+      "za uživatele / měsíc",
+      "list price USD",
+      "1 900 AI Credits měsíčně na uživatele",
+      "Centrální správa a policy management",
+      "Sdílený pool kreditů v organizaci",
+      "3 900 AI Credits měsíčně",
+      "Early access k novým modelům a funkcím"
+    ]
+  },
+  {
+    "number": 19,
+    "texts": [
+      "AI Credits: proč záleží na modelu",
+      "Model",
+      "×",
+      "rozsah úlohy",
+      "=",
+      "AI spotřeba",
+      "kontext · délka interakce · výstup · agentní kroky",
+      "$",
+      "Lightweight model",
+      "Rychlé a jednoduché úlohy",
+      "$$",
+      "Standardní model",
+      "Běžná každodenní práce",
+      "$$$",
+      "Dlouhá agentní session / výkonný model",
+      "Komplexní problémy a delegované úlohy",
+      "Optimalizujte model podle úlohy.",
+      "Ne každá úloha potřebuje nejsilnější model. Výběr modelu ovlivňuje rychlost i náklady."
+    ]
+  },
+  {
+    "number": 20,
+    "texts": [
+      "Jak do toho zapadá CSP?",
+      "Copilot licence",
+      "+",
+      "AI spotřeba",
+      "+",
+      "Azure spotřeba",
+      "+",
+      "Služby partnera",
+      "=",
+      "Partner opportunity",
+      "Pro partnera není GitHub Copilot jen další seat licence.",
+      "Kolem něj vzniká širší opportunity – adopce, AI a Azure consumption, governance a implementační služby."
+    ]
+  },
+  {
+    "number": 21,
+    "texts": [
+      "Děkujeme za pozornost.",
+      "Otázky a diskuze",
+      "Juraj Kurtulik · Solutions Architect · CoE Microsoft, TD SYNNEX"
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+export function Ambient(){return <div className="ambient" aria-hidden="true"><div className="ambient-photo"/><div className="light light-blue"/><div className="light light-purple"/><div className="ambient-grid"/><div className="binary">01 001 10 01<br/>100 01 011 0<br/>010 10 001 1</div></div>}

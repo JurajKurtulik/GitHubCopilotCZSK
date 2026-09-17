@@ -1,0 +1,16 @@
+import { useState,useEffect,useCallback,useRef } from 'react';
+import { AnimatePresence,MotionConfig,motion,useReducedMotion } from 'framer-motion';
+import { Ambient } from './Ambient';
+import { Navigation } from './Navigation';
+import { Scene, titles } from './Scenes';
+import { asset } from './primitives';
+function readHash(){const match=location.hash.match(/^#\/slide\/(\d+)$/); return Math.max(0,Math.min(titles.length-1,match?Number(match[1])-1:0));}
+export function Presentation(){
+ const [index,setIndex]=useState(readHash); const [notice,setNotice]=useState(''); const reduce=useReducedMotion();
+ const touch=useRef<{x:number;y:number}|null>(null);
+ const go=useCallback((n:number)=>{const next=Math.max(0,Math.min(titles.length-1,n)); location.hash=`/slide/${next+1}`;setIndex(next)},[]);
+ const fullscreen=useCallback(async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();setNotice('')}catch{setNotice('Celá obrazovka není v tomto prohlížeči dostupná. Prezentaci můžete ovládat šipkami.')}},[]);
+ useEffect(()=>{const sync=()=>{const n=readHash();setIndex(n); if(location.hash!==`#/slide/${n+1}`)history.replaceState(null,'',`#/slide/${n+1}`)};sync();window.addEventListener('hashchange',sync);return()=>window.removeEventListener('hashchange',sync)},[]);
+ useEffect(()=>{document.title=`${titles[index]} · GitHub Copilot`;const key=(e:KeyboardEvent)=>{if(e.altKey||e.ctrlKey||e.metaKey||e.target instanceof HTMLInputElement||e.target instanceof HTMLTextAreaElement)return;if(e.key===' '&&(e.target as HTMLElement)?.closest('button,a'))return; if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(index+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(index-1)}else if(e.key==='Home'){e.preventDefault();go(0)}else if(e.key==='End'){e.preventDefault();go(titles.length-1)}else if(e.key.toLowerCase()==='f'){e.preventDefault();void fullscreen()}};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[index,go,fullscreen]);
+ return <MotionConfig reducedMotion="user"><main className="presentation" onTouchStart={e=>{touch.current={x:e.changedTouches[0].clientX,y:e.changedTouches[0].clientY}}} onTouchEnd={e=>{if(!touch.current)return;const dx=e.changedTouches[0].clientX-touch.current.x;const dy=e.changedTouches[0].clientY-touch.current.y;if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.5)go(index+(dx<0?1:-1));touch.current=null}}><Ambient/><div className="stage"><div className="brand"><img src={asset('td-synnex.png')} alt="TD SYNNEX"/><span>CoE Microsoft</span></div><AnimatePresence mode="wait" initial={false}><motion.section className={`scene scene-${index+1}`} key={index} aria-label={titles[index]} initial={{opacity:0,x:reduce?0:18}} animate={{opacity:1,x:0}} exit={{opacity:0,x:reduce?0:-12}} transition={{duration:reduce?0:.22}}><Scene index={index} fullscreen={fullscreen}/></motion.section></AnimatePresence><div className="edition">MICROSOFT PARTNEŘI <span> / </span> SMB</div><Navigation titles={titles} index={index} go={go} fullscreen={fullscreen}/></div>{notice&&<div role="status" className="notice" onClick={()=>setNotice('')}>{notice}</div>}<div className="sr-only" aria-live="polite" aria-atomic="true">{titles[index]}</div></main></MotionConfig>
+}
