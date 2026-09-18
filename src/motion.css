@@ -153,6 +153,34 @@
 .person-symbol{width:1em;height:1em;flex-shrink:0;filter:drop-shadow(0 0 8px #40e0f530)}
 .data-particles i{width:var(--star-size,3px);height:var(--star-size,3px);animation-duration:var(--particle-period);box-shadow:0 0 5px #b8faff90,0 0 12px #40e0f550}
 @keyframes particle-drift{0%,100%{transform:translate(0,0);opacity:calc(var(--star-brightness,1)*.3)}50%{transform:translate(22px,-38px);opacity:calc(var(--star-brightness,1)*.75)}}
+
+/* Light originates on the track; foreground nodes and panels occlude it. */
+@keyframes soft-travel{0%{left:0%;opacity:0}8%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+.soft-pulse{clip-path:inset(-30px 0)}
+.workspace{position:relative;z-index:3}
+.satellites{position:relative;z-index:1}
+.brain-beam{left:15%;right:15%;z-index:0}
+.system-part{z-index:2}
+.brain-beam .soft-pulse{clip-path:inset(-30px 0)}
+.flow{z-index:2}.flow-node{z-index:4}
+.lifecycle .flow{z-index:2}
+.lifecycle-progress{z-index:1}
+.lifecycle-focus{z-index:3}
+.flow-signal{z-index:0}
+.azure-connection{position:relative;isolation:isolate}
+.azure-connection>.azure-journey{left:14%;width:70%;top:50%;height:24px;transform:translateY(-50%);z-index:1}
+.azure-connection>.azure-journey .glow-traveler{width:12%;max-width:120px}
+.azure-connection>.connection-track{z-index:0}
+.azure-connection>div:not(.data-pulse):not(.connection-track){position:relative;z-index:2}
+.azure-skills{background:#101e30}
+.model-factor:before{animation-name:factor-soft;animation-duration:13.5s;animation-fill-mode:both}
+@keyframes factor-soft{0%,100%{opacity:0}50%{opacity:1}}
+.doc-1 h2{color:var(--cyan)}
+.price-business{animation:business-glow 6s ease-in-out infinite}
+@keyframes workspace-glow{0%,100%{border-color:#2e4964;box-shadow:0 15px 55px #0003,0 0 10px #40e0f510}50%{border-color:#68cde4;box-shadow:0 15px 55px #0003,0 0 42px #40e0f555,0 0 16px #40e0f538}}
+@keyframes business-glow{0%,100%{box-shadow:0 0 12px #40e0f510}50%{box-shadow:0 0 46px #40e0f55a,0 0 18px #40e0f538}}
+.data-particles i:nth-child(4n){animation:particle-drift var(--particle-period) ease-in-out var(--particle-delay) infinite,star-flare 17s ease-in-out var(--particle-delay) infinite}
+@keyframes star-flare{0%,36%,52%,100%{filter:brightness(1);box-shadow:0 0 5px #b8faff90,0 0 12px #40e0f550}44%{filter:brightness(2.4);box-shadow:0 0 7px #e0ffff,0 0 20px #60eaffb0,0 0 32px #40e0f570}}
 @media(max-width:650px) and (orientation:portrait){
  .art-caption{display:none}.hero-stream{inset:-5%;width:110%;height:110%}
  .flow-signal,.documentation-pulse{display:none}
