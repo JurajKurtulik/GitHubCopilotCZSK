@@ -4,10 +4,11 @@ import { motion, useReducedMotion } from 'framer-motion';
 export const keynoteEase = [.22, 1, .36, 1] as const;
 
 /** Decorative packets use a normalized SVG path. No timers or per-frame React updates. */
-export function DataPulse({ path='M 0 5 L 100 5', viewBox='0 0 100 10', period=7.5, delay=0, reverse=false, className='', track=false }:{
- path?:string;viewBox?:string;period?:number;delay?:number;reverse?:boolean;className?:string;track?:boolean;
+export function DataPulse({ path, viewBox='0 0 100 10', period=7.5, delay=0, reverse=false, className='', track=false, pingPong=false }:{
+ path?:string;viewBox?:string;period?:number;delay?:number;reverse?:boolean;className?:string;track?:boolean;pingPong?:boolean;
 }) {
  const reduced=useReducedMotion();
+ if(!path)return <div className={`data-pulse soft-pulse ${pingPong?'ping-pong':''} ${className}`} aria-hidden="true" style={{'--pulse-period':`${period*.65}s`,'--pulse-delay':`${-delay}s`} as CSSProperties}>{!reduced&&<i className="glow-traveler"/>}</div>;
  return <svg className={`data-pulse ${className}`} viewBox={viewBox} preserveAspectRatio="none" aria-hidden="true" focusable="false" style={{'--pulse-period':`${period*.65}s`,'--pulse-delay':`${-delay}s`} as CSSProperties}>
   {track&&<path d={path} className="pulse-track"/>}
   {!reduced&&<path d={path} pathLength="100" className={`pulse-packet ${reverse?'reverse':''}`}/>}
